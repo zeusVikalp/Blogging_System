@@ -68,3 +68,51 @@
         "status": "Error in Saving Blog",
          error: error
     }
+    
+## For Getting All Blogs By Popularity
+
+## Request 
+
+`Get /allBlogs`
+
+## Response
+
+`Success (Status Code 200)`
+
+    {
+        "status": "Successfully get all blogs by popularity",
+        "blogs" : blogs
+    }
+
+`Failure (Status Code 401)`
+
+    {
+        "status": "Error Occured during fetching all blogs",
+         error : error
+    }
+    
+# Search Blogs based on Author and Title
+
+## Request
+
+`GET /search?author=author&title=title`
+
+## Response
+
+`Success (Status Code 200)`
+
+     {
+          "status" : "Success",
+          "message": "Search Successfully"
+          "blog" : response    
+      }
+      
+ `Failure (Status Code 401)`
+
+      {
+            "status" : "Error",
+            "message" : "Author or Title name is not Correct"
+      }
+      
+ 
+
