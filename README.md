@@ -114,5 +114,26 @@
             "message" : "Author or Title name is not Correct"
       }
       
+ # Publish Blog
+ 
+ ## Request
+ 
+ `POST /publish`
+ 
+ ## Response
+ 
+ `Success (Status Code 200)`
+
+      {
+          "status" : "Successfully Published"
+      }
+      
+ `Failure (Status Code 401)`
+  
+     {
+         "status": "Something went wrong in Publishing",
+         "message" : error
+     }
+      
  
 
