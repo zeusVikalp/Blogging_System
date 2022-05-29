@@ -1,10 +1,16 @@
 const express = require("express")
-const userController = require("../Controllers/userController")
+const blogController = require("../Controllers/blogController")
+const authController = require("../Controllers/authController")
 const app = express();
 app.use(express.json())
 
-app.post("/post",userController.createPost);
-// app.get("/authpost", userController.authPost )
-app.get("/user",userController.getBlog);
+app.post("/createBlog",blogController.createPost);
+app.post("/like",blogController.Like);
+app.get("/blogDetails", blogController.Blog);
+app.get("/search",blogController.Search);
+app.get("/allBlogs", blogController.AllBlogs)
+app.post("/publish", blogController.Publish)
+app.post("/register",authController.Register)
+app.get("/",blogController.Dashboard)
 
 module.exports = app
