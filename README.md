@@ -167,7 +167,7 @@
 
 ## Request
 
-`PUT /blog/like`
+`Post /like`
 
     {
       headers : {
