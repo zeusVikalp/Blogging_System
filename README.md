@@ -134,6 +134,58 @@
          "status": "Something went wrong in Publishing",
          "message" : error
      }
+     
       
+ # To View a Blog
  
+ ## Request
+ 
+ `GET /blogDetails`
+ 
+     {
+      headers : {
+          "blogid" : blogid,
+      }
+    }
 
+## Response
+
+`Success (Status Code 200)`
+
+      {
+          "status" : "Success",
+          "blog" : blogDetails
+      }
+      
+`Failure (Status Code 401)`
+
+     {
+           status : "Failed"
+     }
+     
+# To Like or Unlike a Blog
+
+## Request
+
+`PUT /blog/like`
+
+    {
+      headers : {
+          "blogid" : blogid,
+          "authorid" : authorid
+      }
+    }
+    
+## Response
+
+`Success (Status Code 200)`
+
+      {
+          status : 'Liked Successfully' or 'Unliked Successfully'
+      }
+
+`Failure (Status Code 401)`
+
+      {
+             status : "Error Occured",
+      }
